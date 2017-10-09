@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TutorialServer.Data;
 using TutorialServer.Models;
 using TutorialServer.Services;
-
+using TutorialServer.Models;
+//https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api
 namespace TutorialServer
 {
     public class Startup
@@ -28,6 +25,8 @@ namespace TutorialServer
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<OrderDetailContext>(opt => opt.UseInMemoryDatabase("OrderDetail")); 
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
