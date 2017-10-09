@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialServer", "TutorialServer\TutorialServer.csproj", "{588C8954-7682-4FCE-ACE9-3EAE5CB66DE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TutorialServer", "TutorialServer\TutorialServer.csproj", "{588C8954-7682-4FCE-ACE9-3EAE5CB66DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialClient", "E:\SourceControl\GitHub\TutorialClient\TutorialClient.csproj", "{FC678F49-769C-470E-A260-5C1DA766ECE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{588C8954-7682-4FCE-ACE9-3EAE5CB66DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{588C8954-7682-4FCE-ACE9-3EAE5CB66DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{588C8954-7682-4FCE-ACE9-3EAE5CB66DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC678F49-769C-470E-A260-5C1DA766ECE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC678F49-769C-470E-A260-5C1DA766ECE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC678F49-769C-470E-A260-5C1DA766ECE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC678F49-769C-470E-A260-5C1DA766ECE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
