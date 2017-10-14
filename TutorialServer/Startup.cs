@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 using TutorialServer.Data;
 using TutorialServer.Models;
 using TutorialServer.Services;
-using TutorialServer.Models;
-using Swashbuckle.AspNetCore.Swagger;
+
 //https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api
+
+
 namespace TutorialServer
 {
     public class Startup
@@ -27,7 +29,9 @@ namespace TutorialServer
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<OrderDetailContext>(opt => opt.UseInMemoryDatabase("OrderDetail")); 
+            services.AddDbContext<OrderDetailContext>(opt => opt.UseInMemoryDatabase("OrderDetail"));
+
+            services.AddDbContext<StoreDataContext>(o => o.UseSqlServer(@"Server=localhost;Database=StoreData;Trusted_Connection=True;"));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
