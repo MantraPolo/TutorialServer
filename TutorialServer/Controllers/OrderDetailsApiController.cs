@@ -21,6 +21,10 @@ namespace TutorialServer.Controllers
         }
 
         // GET: api/OrderDetailsApi
+        /// <summary>
+        /// Hello!
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<OrderDetail> GetOrderDetails()
         {
